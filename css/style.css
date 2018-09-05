@@ -1,0 +1,207 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /*calculates fontsize defualt of 1 rem to be 10px*/ }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  color: #FFF;
+  box-sizing: border-box; }
+
+#wrapper {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto; }
+
+#img-container img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 7rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px; }
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.col-2 {
+  grid-column: auto/span 2; }
+
+.col-3 {
+  grid-column: auto/span 3; }
+
+.col-4 {
+  grid-column: auto/span 4; }
+
+.col-5 {
+  grid-column: auto/span 5; }
+
+.col-6 {
+  grid-column: auto/span 6; }
+
+.col-8 {
+  grid-column: auto/span 8; }
+
+.col-10 {
+  grid-column: auto/span 10; }
+
+.col-12 {
+  grid-column: auto/span 12; }
+
+.row-2 {
+  grid-row: auto/span 2; }
+
+.row-4 {
+  grid-row: auto/span 4; }
+
+.row-6 {
+  grid-row: auto/span 6; }
+
+.row-8 {
+  grid-row: auto/span 8; }
+
+.row-10 {
+  grid-row: auto/span 10; }
+
+.row-12 {
+  grid-row: auto/span 12; }
+
+.header {
+  position: relative;
+  height: 100vh;
+   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  background-size: cover;
+  background-position: top; }
+  .header-nav {
+    display: block;
+    background-color: rgba(81, 95, 103, 0.5);
+    padding: 2.5rem 1rem; }
+    .header-nav-logo {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 700; }
+      .header-nav-logo-primary {
+        color: #93ff4b; }
+      .header-nav-logo-secondary {
+        color: #FFF; }
+    .header-nav-list {
+      display: flex;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase; }
+      .header-nav-list li {
+        display: inline-block;
+        list-style-type: none; }
+      .header-nav-list li:nth-child(2) {
+        margin-left: auto; }
+      .header-nav-list li:not(:last-child) {
+        margin-right: 4rem; }
+      .header-nav-list li a {
+        display: block;
+        text-decoration: none;
+        color: #FFF;
+        padding-top: .7rem;
+        transition: all .2s; }
+      .header-nav-list li a:hover {
+        color: #93ff4b; }
+      .header-nav-list .active {
+        border: solid 1.5px #FFF;
+        padding: .7rem 2rem; }
+  .header-text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.heading-primary {
+  color: #FFF;
+  text-align: center;
+  font-weight: 700; }
+  .heading-primary-main {
+    font-size: 3.2rem;
+    padding: .5rem 1rem; }
+  .heading-primary-sub {
+    font-size: 3.2rem;
+    padding: .5rem 1rem; }
+
+.heading-secondary {
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding-top: 6rem; }
+  .heading-secondary:after {
+    content: "";
+    display: block;
+    width: 3.7rem;
+    border-bottom: 1.5px solid #FFF; }
+
+
+.btn, .btn:link {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-white {
+  background-color: #FFF;
+  color: #777; }
+  .btn-white::after {
+    background-color: #FFF; }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .85s;
+  animation-fill-mode: backwards; }
